@@ -14,6 +14,7 @@
   </Target>
   <PropertyGroup>
     <BIELibsFolder>$(GameFolder)/BepInEx/core</BIELibsFolder>
+    <MonoLibsFolder>$(GameFolder)/mono/Managed</MonoLibsFolder>
     <UnhollowedLibsFolder>$(GameFolder)/BepInEx/unhollowed</UnhollowedLibsFolder>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <RootNamespace>MTFO</RootNamespace>
@@ -25,6 +26,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="$(MonoLibsFolder)/Microsoft.CSharp.dll" Private="false" />
     <Reference Include="$(BIELibsFolder)/*.dll" Private="false" />
     <Reference Include="$(UnhollowedLibsFolder)/*.dll" Private="false" />
     <Reference Remove="$(UnhollowedLibsFolder)/Newtonsoft.Json.dll" />
